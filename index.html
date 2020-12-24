@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, shrink-to-fit=no">
+  <title>gh</title>
+  <style type="text/css">
+      body {
+          margin: 0;
+          background-color: #fff;
+          color: #000;
+          font-size: 16px;
+          line-height: 1.5;
+      }
+
+      main {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+      }
+
+      input[type="text"] {
+          display: block;
+          width: 30ch;
+          padding: .375rem .75rem;
+          margin: 0 auto;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #212529;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          border-radius: .25rem;
+          transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      }
+
+      input[type="text"] + input[type="text"] {
+          margin-top: 1rem;
+      }
+
+      #alert {
+          position: relative;
+          padding: 1rem 1rem;
+          margin: 1rem 0;
+          border: 1px solid transparent;
+          border-radius: .25rem;
+          color: #842029;
+          background-color: #f8d7da;
+          border-color: #f5c2c7;
+      }
+
+      .d-none {
+          display: none;
+      }
+
+      #qrcode {
+          width: 320px;
+          height: 320px;
+          margin-top: 1rem;
+      }
+
+      #qrcode img, #qrcode svg {
+          width: 100%;
+          height: auto;
+      }
+  </style>
+<body>
+<main>
+  <input id="pin" type="text" placeholder="pin" />
+  <input id="seed" type="text" placeholder="seed" />
+  <div role="alert" id="alert" class="d-none"></div>
+  <div id="qrcode"></div>
+</main>
+
+<script defer src="js/main.js" type="module"></script>
+</body>
+</html>
